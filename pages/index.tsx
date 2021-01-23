@@ -1,12 +1,11 @@
 import Head from "next/head";
-// import styles from '../styles/Home.module.css'
 import { signIn, signOut, useSession } from "next-auth/client";
 
 export default function Home() {
   const [session, loading] = useSession();
 
-  if(loading){
-    return <div>Loading...</div>
+  if (loading) {
+    return <div>Loading...</div>;
   }
   return (
     <div>
@@ -26,7 +25,7 @@ export default function Home() {
           {session && (
             <p>
               Signed in as:{" "}
-              <span className="font-bold text-blue-500">
+              <span className="font-bold text-blue-300">
                 {session.user.name}
               </span>
             </p>
@@ -34,10 +33,10 @@ export default function Home() {
           <div>
             {!session ? (
               <button
-                onClick={() => signIn('github')}
+                onClick={() => signIn()}
                 className="px-3 py-1 ml-2 rounded-lg text-white bg-blue-400 hover:bg-blue-500 focus:outline-none"
               >
-                Sign in with github
+                Sign In
               </button>
             ) : (
               <>
