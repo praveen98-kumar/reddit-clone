@@ -1,4 +1,5 @@
 import Head from "next/head";
+
 import { signIn, signOut, useSession } from "next-auth/client";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
   if (loading) {
     return <div>Loading...</div>;
   }
+
   return (
     <div>
       <Head>
@@ -50,6 +52,7 @@ export default function Home() {
             )}
           </div>
         </div>
+
 
         <div></div>
       </main>
