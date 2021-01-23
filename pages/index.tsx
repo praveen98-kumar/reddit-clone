@@ -11,3 +11,4 @@ const Home: React.FC<pageProps> = ({}) => {
 }
 
 export default Home;
+
